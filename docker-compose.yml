@@ -1,0 +1,9 @@
+version: '3'
+services:
+  dnsrobocert:
+    image: adferrand/dnsrobocert
+    container_name: dnsrobocert
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ./dnsrobocert:/etc/dnsrobocert
+    restart: always

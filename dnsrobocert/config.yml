@@ -1,0 +1,16 @@
+draft: false
+
+acme:
+  email_account: <your-email>
+  staging: false
+
+profiles:
+  - name: dns_profile
+    provider: <your-dns-provider> # choose your dns provider https://dnsrobocert.readthedocs.io/en/latest/providers_options.html#providers-options
+    provider_options:
+      auth_token: <your-dns-provider-token>
+
+certificates:
+  - domains:
+      - <your-domain>
+    profile: dns_profile
